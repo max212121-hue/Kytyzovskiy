@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KUTYZOVSKIY | Welcome</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+        margin: 0;
+        overflow: hidden;
+        background: #050812;
+        font-family: 'Orbitron', sans-serif;
+    }
+
+    .splash {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        background:
+            radial-gradient(ellipse at center, #102b46 0%, #080d19 45%, #03050a 100%);
+    }
+
+    .splash::before {
+        content: "";
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        border: 1px solid rgba(0, 170, 255, 0.2);
+        border-radius: 50%;
+        box-shadow:
+            0 0 60px rgba(0, 170, 255, 0.15),
+            inset 0 0 60px rgba(0, 170, 255, 0.1);
+        animation: rotate 20s linear infinite;
+    }
+
+    .splash::after {
+        content: "";
+        position: absolute;
+        width: 420px;
+        height: 420px;
+        border: 1px solid rgba(0, 170, 255, 0.15);
+        border-radius: 50%;
+        animation: rotate 15s linear infinite reverse;
+    }
+
+    .splash-content {
+        position: relative;
+        z-index: 2;
+        padding: 20px;
+        animation: appear 1.5s ease;
+    }
+
+    .splash h1 {
+        font-size: clamp(35px, 8vw, 85px);
+        letter-spacing: 5px;
+        color: white;
+        text-shadow: 0 0 15px #00aaff, 0 0 40px #0077ff;
+        margin-bottom: 15px;
+    }
+
+    .splash h1 span {
+        color: #00aaff;
+    }
+
+    .typing {
+        color: #8bdcff;
+        font-size: clamp(10px, 2vw, 16px);
+        letter-spacing: 4px;
+        margin: 0 auto;
+        animation: glow 2s infinite alternate;
+    }
+
+    .subtitle {
+        color: #71869b;
+        font-size: 11px;
+        letter-spacing: 4px;
+        margin-top: 25px;
+    }
+
+    .enter-btn {
+        display: inline-block;
+        margin-top: 45px;
+        padding: 16px 55px;
+        border: 1px solid #00aaff;
+        color: #00aaff;
+        text-decoration: none;
+        letter-spacing: 5px;
+        transition: 0.4s;
+        background: rgba(0, 170, 255, 0.05);
+    }
+
+    .enter-btn:hover {
+        background: #00aaff;
+        color: #050812;
+        box-shadow: 0 0 25px #00aaff;
+        transform: scale(1.08);
+    }
+
+    @keyframes rotate {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+
+    @keyframes appear {
+        from { opacity: 0; transform: translateY(25px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes glow {
+        from { text-shadow: 0 0 5px #00aaff; }
+        to { text-shadow: 0 0 18px #00aaff; }
+    }
+    </style>
+</head>
+
+<body>
+
+    <main class="splash">
+        <div class="splash-content">
+
+            <h1>KUTY<span>ZOVSKIY</span></h1>
+
+            <div class="typing">
+                CREATE YOUR OWN WORLD
+            </div>
+
+            <p class="subtitle">
+                PYTHON STUDENT | FUTURE GAME DEVELOPER
+            </p>
+
+            <a href="index.html" class="enter-btn">
+                ENTER
+            </a>
+
+        </div>
+    </main>
+
+</body>
+</html>
